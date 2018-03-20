@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {EventsPage} from "../events/events";
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the EventsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,22 @@ import {EventsPage} from "../events/events";
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-events',
+  templateUrl: 'events.html',
 })
-export class LoginPage {
+export class EventsPage {
+
+  events = 'all';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad EventsPage');
   }
 
-  onLoadEvents() {
-    this.navCtrl.push(EventsPage);
+  onLoadEvent() {
+    this.navCtrl.push(EventDataPage);
   }
 
 }

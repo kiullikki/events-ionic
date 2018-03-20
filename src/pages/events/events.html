@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Events</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only clear item-end>
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="events">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="recent">
+        Recent
+      </ion-segment-button>
+      <ion-segment-button value="finished">
+        Finished
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="events">
+    <ion-list *ngSwitchCase="'all'">
+      <ion-item (click)="onLoadEvent()">
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'recent'">
+      <ion-item>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'finished'">
+      <ion-item>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

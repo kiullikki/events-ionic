@@ -1,5 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
 <ion-content padding>
-  <form class="form login__form">
+  <form>
     <p>Login</p>
     <ion-list>
       <ion-item>
@@ -15,7 +24,8 @@
     </ion-list>
 
     <div class="padding">
-      <button type="submit" class="button button-block button-positive">Go!</button>
+      <button (click)="onLoadEvents()" type="submit" ion-button round full>Go!</button>
     </div>
   </form>
 </ion-content>
+
