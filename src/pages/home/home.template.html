@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Events</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only clear item-end>
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div padding>
+    <ion-segment>
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="recent">
+        Recent
+      </ion-segment-button>
+      <ion-segment-button value="finished">
+        Finished
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-list *ngIf="eventsList">
+      <ion-item *ngFor="let event of eventsList">
+        <h2>{{event.name}}</h2>
+        <p>{{event.summary}}</p>
+      </ion-item>
+  </ion-list>
+  <!--<div [ngSwitch]="events">-->
+    <!--<ion-list *ngSwitchCase="'all'">-->
+      <!--<ion-item ">-->
+        <!--<ion-avatar item-start>-->
+        <!--</ion-avatar>-->
+        <!--<h2>Name of the lecture</h2>-->
+        <!--<p>Short desc. Short desc. Short desc. Short desc.</p>-->
+      <!--</ion-item>-->
+      <!--<ion-item (click)="onLoadEvent()">-->
+        <!--<ion-avatar item-start>-->
+        <!--</ion-avatar>-->
+        <!--<h2>Name of the lecture</h2>-->
+        <!--<p>Short desc. Short desc. Short desc. Short desc.</p>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+
+    <!--<ion-list *ngSwitchCase="'recent'"></ion-list>-->
+
+    <!--<ion-list *ngSwitchCase="'finished'"></ion-list>-->
+  <!--</div>-->
+</ion-content>
